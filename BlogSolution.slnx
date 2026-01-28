@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BlogApi/BlogApi.csproj" Id="25522338-9139-4497-8f90-472b0a9521cf" />
+  <Project Path="BlogConsole/BlogConsole.csproj" />
+</Solution>
