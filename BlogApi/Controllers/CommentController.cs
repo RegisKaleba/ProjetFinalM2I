@@ -30,7 +30,10 @@ namespace BlogApi.Controllers
                 CreatedAt = DateTime.Now
             };
 
-            var created = await _commentService.CreateAsync(comment);
+            var created = await _commentService.CreateAsync(articleId, comment);
+
+            if (created == null)
+                return NotFound("Article inexistant");
 
             var result = new CommentDto
             {
@@ -40,7 +43,8 @@ namespace BlogApi.Controllers
                 CreatedAt = created.CreatedAt
             };
 
-            return CreatedAtAction(nameof(GetCommentById),
+            return CreatedAtAction(
+                nameof(GetCommentById),
                 new { id = created.Id },
                 result);
         }

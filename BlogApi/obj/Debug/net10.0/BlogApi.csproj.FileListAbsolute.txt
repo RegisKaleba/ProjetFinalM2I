@@ -120,3 +120,4 @@ C:\Users\Administrateur\Desktop\BlogSolution\BlogApi\obj\Debug\net10.0\refint\Bl
 C:\Users\Administrateur\Desktop\BlogSolution\BlogApi\obj\Debug\net10.0\BlogApi.pdb
 C:\Users\Administrateur\Desktop\BlogSolution\BlogApi\obj\Debug\net10.0\BlogApi.genruntimeconfig.cache
 C:\Users\Administrateur\Desktop\BlogSolution\BlogApi\obj\Debug\net10.0\ref\BlogApi.dll
+C:\Users\Administrateur\Desktop\BlogSolution\BlogApi\obj\Debug\net10.0\BlogApi.sourcelink.json

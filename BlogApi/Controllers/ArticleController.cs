@@ -21,12 +21,11 @@ namespace BlogApi.Controllers
         public async Task<ActionResult<IEnumerable<ArticleListDto>>> GetAll()
         {
             var articles = await _service.GetAllAsync();
-
             var dtos = articles.Select(a => new ArticleListDto
             {
                 Id = a.Id,
                 Title = a.Title,
-                Content = a.Content, // ici tu prends bien le contenu de l'article
+                Content = a.Content,
                 CreatedAt = a.CreatedAt
             }).ToList();
 
@@ -46,6 +45,7 @@ namespace BlogApi.Controllers
                 Title = article.Title,
                 Content = article.Content,
                 CreatedAt = article.CreatedAt,
+                UpdatedAt = article.UpdatedAt, // null si jamais mis à jour
                 Comments = article.Comments.Select(c => new CommentDto
                 {
                     Id = c.Id,
@@ -85,18 +85,36 @@ namespace BlogApi.Controllers
 
         // PUT /api/articles/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, UpdateArticleDto dto)
+        public async Task<ActionResult<ArticleDetailsDto>> Update(int id, UpdateArticleDto dto)
         {
             var article = await _service.GetByIdAsync(id);
             if (article == null) return NotFound();
 
             article.Title = dto.Title;
             article.Content = dto.Content;
-            article.UpdatedAt = DateTime.Now;
+            article.UpdatedAt = DateTime.Now; // date mise à jour
 
             await _service.UpdateAsync(article);
-            return NoContent();
+
+            var result = new ArticleDetailsDto
+            {
+                Id = article.Id,
+                Title = article.Title,
+                Content = article.Content,
+                CreatedAt = article.CreatedAt,
+                UpdatedAt = article.UpdatedAt, // sera affiché maintenant
+                Comments = article.Comments.Select(c => new CommentDto
+                {
+                    Id = c.Id,
+                    Author = c.Author,
+                    Content = c.Content,
+                    CreatedAt = c.CreatedAt
+                }).ToList()
+            };
+
+            return Ok(result);
         }
+
 
         // DELETE /api/articles/{id}
         [HttpDelete("{id}")]

@@ -111,3 +111,4 @@ C:\Users\Administrateur\Desktop\BlogSolution\BlogConsole\obj\Debug\net10.0\refin
 C:\Users\Administrateur\Desktop\BlogSolution\BlogConsole\obj\Debug\net10.0\BlogConsole.pdb
 C:\Users\Administrateur\Desktop\BlogSolution\BlogConsole\obj\Debug\net10.0\BlogConsole.genruntimeconfig.cache
 C:\Users\Administrateur\Desktop\BlogSolution\BlogConsole\obj\Debug\net10.0\ref\BlogConsole.dll
+C:\Users\Administrateur\Desktop\BlogSolution\BlogConsole\obj\Debug\net10.0\BlogConsole.sourcelink.json

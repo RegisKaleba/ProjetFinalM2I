@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BlogApi.Models.DTOs.ArticleDetailsDto",
+        "Type": "ArticleDetailsDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -92,7 +92,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BlogApi.Models.DTOs.ArticleDetailsDto",
+        "Type": "ArticleDetailsDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -121,7 +121,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "ArticleDetailsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "BlogApi.Controllers.ArticlesController",
