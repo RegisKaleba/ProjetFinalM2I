@@ -1,28 +1,33 @@
-﻿using BlogConsole.Services;
-using BlogConsole.Models;
+﻿using BlogConsole.Services;  // Import des services métiers (ArticleService, CommentService)
+using BlogConsole.Models;    // Import des modèles (Article, Comment)
 
-namespace BlogConsole.UI;
+namespace BlogConsole.UI;      // Définition de l'espace de noms pour l'interface console
 
+// Classe principale pour gérer le menu console du blog
 public class ConsoleMenu
 {
+    // Services pour gérer les articles et les commentaires
     private readonly ArticleService articleService;
     private readonly CommentService commentService;
 
+    // Constructeur : initialise les services
     public ConsoleMenu()
     {
         articleService = new ArticleService();
         commentService = new CommentService();
     }
 
+    // Méthode principale qui lance la boucle du menu
     public void Run()
     {
-        bool exit = false;
+        bool exit = false; // Booléen pour contrôler la sortie du menu
 
-        while (!exit)
+        while (!exit) // Boucle jusqu'à ce que l'utilisateur choisisse de quitter
         {
-            ConsoleHelper.Clear();
-            DrawHeader("BLOG CONSOLE");
+            ConsoleHelper.Clear();          // Vide la console
+            DrawHeader("BLOG CONSOLE");     // Affiche un en-tête stylé
 
+            // Affichage du menu
             Console.WriteLine("1. Lister les articles");
             Console.WriteLine("2. Créer un article");
             Console.WriteLine("3. Voir un article");
@@ -33,8 +38,9 @@ public class ConsoleMenu
             Console.WriteLine("0. Quitter");
 
             Console.Write("\nVotre choix : ");
-            string choice = Console.ReadLine()?.Trim() ?? "";
+            string choice = Console.ReadLine()?.Trim() ?? ""; // Lit la saisie utilisateur
 
+            // Gestion des choix avec switch
             switch (choice)
             {
                 case "1": ListArticles(); break;
@@ -44,19 +50,21 @@ public class ConsoleMenu
                 case "5": DeleteArticle(); break;
                 case "6": AddComment(); break;
                 case "7": DeleteComment(); break;
-                case "0": exit = true; break;
+                case "0": exit = true; break;  // Quitter la boucle
                 default:
-                    ConsoleHelper.WriteError("[ERR] Choix invalide !");
+                    ConsoleHelper.WriteError("[ERR] Choix invalide !"); // Message pour choix incorrect
                     break;
             }
 
-            if (!exit) ConsoleHelper.Pause();
+            if (!exit) ConsoleHelper.Pause(); // Pause après chaque action
         }
     }
 
     // =====================
     // Affichage stylé
     // =====================
+
+    // Affiche un header décoratif en cyan
     private void DrawHeader(string title)
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
@@ -66,6 +74,7 @@ public class ConsoleMenu
         Console.ResetColor();
     }
 
+    // Affiche une ligne séparatrice
     private void DrawSeparator()
     {
         Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -76,12 +85,14 @@ public class ConsoleMenu
     // =====================
     // Menu actions
     // =====================
+
+    // Affiche tous les articles existants
     private void ListArticles()
     {
-        var articles = articleService.GetAll();
+        var articles = articleService.GetAll(); // Récupère tous les articles
         if (articles.Count == 0)
         {
-            ConsoleHelper.WriteError("[INFO] Aucun article trouvé.");
+            ConsoleHelper.WriteError("[INFO] Aucun article trouvé."); // Aucun article
             return;
         }
 
@@ -89,40 +100,43 @@ public class ConsoleMenu
 
         foreach (var article in articles)
         {
-            ConsoleHelper.WriteTitle(article.Title);
+            ConsoleHelper.WriteTitle(article.Title); // Titre en majuscules
             Console.WriteLine($"ID : {article.Id}");
             Console.WriteLine($"Créé le : {article.CreatedAt}");
             if (article.UpdatedAt.HasValue)
                 Console.WriteLine($"Dernière mise à jour : {article.UpdatedAt}");
             Console.WriteLine($"Contenu : {article.Content}");
-            DrawSeparator();
+            DrawSeparator(); // Ligne de séparation
         }
     }
 
+    // Crée un nouvel article
     private void CreateArticle()
     {
         DrawHeader("CRÉER UN ARTICLE");
 
-        string title = ConsoleHelper.ReadRequiredString("Titre : ");
-        string content = ConsoleHelper.ReadRequiredString("Contenu : ");
+        string title = ConsoleHelper.ReadRequiredString("Titre : ");      // Lecture titre
+        string content = ConsoleHelper.ReadRequiredString("Contenu : ");  // Lecture contenu
 
-        var article = articleService.Create(title, content);
+        var article = articleService.Create(title, content);             // Création via service
         ConsoleHelper.WriteSuccess($"[OK] Article créé avec ID {article.Id}");
     }
 
+    // Affiche un article et ses commentaires
     private void ViewArticle()
     {
         DrawHeader("VOIR UN ARTICLE");
 
-        int id = ConsoleHelper.ReadInt("ID de l'article : ");
-        var article = articleService.GetById(id);
+        int id = ConsoleHelper.ReadInt("ID de l'article : ");       // Lecture ID
+        var article = articleService.GetById(id);                  // Recherche article
 
         if (article == null)
         {
-            ConsoleHelper.WriteError("[ERR] Article non trouvé.");
+            ConsoleHelper.WriteError("[ERR] Article non trouvé."); // Article inexistant
             return;
         }
 
+        // Affichage des détails de l'article
         ConsoleHelper.WriteTitle(article.Title);
         Console.WriteLine($"ID : {article.Id}");
         Console.WriteLine($"Créé le : {article.CreatedAt}");
@@ -131,6 +145,7 @@ public class ConsoleMenu
         Console.WriteLine($"Contenu : {article.Content}");
         DrawSeparator();
 
+        // Affichage des commentaires
         var comments = commentService.GetByArticleId(id);
         if (comments.Count == 0)
         {
@@ -149,6 +164,7 @@ public class ConsoleMenu
         }
     }
 
+    // Modifie un article existant
     private void UpdateArticle()
     {
         DrawHeader("MODIFIER UN ARTICLE");
@@ -169,6 +185,7 @@ public class ConsoleMenu
         ConsoleHelper.WriteSuccess("[OK] Article modifié !");
     }
 
+    // Supprime un article et tous ses commentaires
     private void DeleteArticle()
     {
         DrawHeader("SUPPRIMER UN ARTICLE");
@@ -180,12 +197,14 @@ public class ConsoleMenu
             return;
         }
 
+        // Suppression des commentaires associés
         foreach (var c in commentService.GetByArticleId(id))
             commentService.Delete(c.Id);
 
         ConsoleHelper.WriteSuccess("[OK] Article et ses commentaires supprimés !");
     }
 
+    // Ajoute un commentaire à un article existant
     private void AddComment()
     {
         DrawHeader("AJOUTER UN COMMENTAIRE");
@@ -208,6 +227,7 @@ public class ConsoleMenu
         ConsoleHelper.WriteSuccess($"[OK] Commentaire ajouté avec ID {comment.Id}");
     }
 
+    // Supprime un commentaire
     private void DeleteComment()
     {
         DrawHeader("SUPPRIMER UN COMMENTAIRE");
