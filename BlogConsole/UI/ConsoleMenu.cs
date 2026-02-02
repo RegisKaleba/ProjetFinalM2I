@@ -6,7 +6,7 @@ namespace BlogConsole.UI;      // Définition de l'espace de noms pour l'interfa
 // Classe principale pour gérer le menu console du blog
 public class ConsoleMenu
 {
-    // Services pour gérer les articles et les commentaires
+    // Services pour gérer les articles et les commentaires 
     private readonly ArticleService articleService;
     private readonly CommentService commentService;
 
@@ -25,7 +25,7 @@ public class ConsoleMenu
         while (!exit) // Boucle jusqu'à ce que l'utilisateur choisisse de quitter
         {
             ConsoleHelper.Clear();          // Vide la console
-            DrawHeader("BLOG CONSOLE");     // Affiche un en-tête stylé
+            DrawHeader("BLOG CONSOLE");     // Affiche un en-tête super stylax
 
             // Affichage du menu
             Console.WriteLine("1. Lister les articles");

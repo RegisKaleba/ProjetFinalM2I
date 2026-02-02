@@ -69,3 +69,4 @@ public static class ConsoleHelper
         Console.ResetColor();  // Réinitialise la couleur
     }
 }
+
