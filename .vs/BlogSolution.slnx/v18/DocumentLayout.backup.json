@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogconsole\\ui\\consolemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|solutionrelative:blogconsole\\ui\\consolemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\data\\blogcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\data\\blogcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\models\\dtos\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\models\\dtos\\commentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\programapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\programapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\models\\dtos\\articledetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\models\\dtos\\articledetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\services\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\services\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogapi\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25522338-9139-4497-8F90-472B0A9521CF}|BlogApi\\BlogApi.csproj|solutionrelative:blogapi\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogconsole\\ui\\consolehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +51,16 @@
       "RelativeMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|solutionrelative:blogconsole\\services\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogconsole\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|solutionrelative:blogconsole\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogconsole\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|solutionrelative:blogconsole\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogconsole\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|solutionrelative:blogconsole\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|c:\\users\\administrateur\\desktop\\blogsolution\\blogconsole\\ui\\consolemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EB6FAB0-8253-9529-1679-2371B221E41B}|BlogConsole\\BlogConsole.csproj|solutionrelative:blogconsole\\ui\\consolemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,80 +75,192 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ConsoleMenu.cs",
-              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\UI\\ConsoleMenu.cs",
-              "RelativeDocumentMoniker": "BlogConsole\\UI\\ConsoleMenu.cs",
-              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\UI\\ConsoleMenu.cs",
-              "RelativeToolTip": "BlogConsole\\UI\\ConsoleMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPoAAAAAAAAAAAAAAA==",
+              "Title": "BlogContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Data\\BlogContext.cs",
+              "RelativeDocumentMoniker": "BlogApi\\Data\\BlogContext.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Data\\BlogContext.cs*",
+              "RelativeToolTip": "BlogApi\\Data\\BlogContext.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T13:17:06.43Z",
+              "WhenOpened": "2026-02-02T13:50:35.642Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CommentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Models\\DTOs\\CommentDto.cs",
+              "RelativeDocumentMoniker": "BlogApi\\Models\\DTOs\\CommentDto.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Models\\DTOs\\CommentDto.cs",
+              "RelativeToolTip": "BlogApi\\Models\\DTOs\\CommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:50:29.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProgramAPI.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\ProgramAPI.cs",
+              "RelativeDocumentMoniker": "BlogApi\\ProgramAPI.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\ProgramAPI.cs",
+              "RelativeToolTip": "BlogApi\\ProgramAPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:50:22.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ArticleDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Models\\DTOs\\ArticleDetailsDto.cs",
+              "RelativeDocumentMoniker": "BlogApi\\Models\\DTOs\\ArticleDetailsDto.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Models\\DTOs\\ArticleDetailsDto.cs",
+              "RelativeToolTip": "BlogApi\\Models\\DTOs\\ArticleDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:49:47.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Models\\Article.cs",
+              "RelativeDocumentMoniker": "BlogApi\\Models\\Article.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Models\\Article.cs",
+              "RelativeToolTip": "BlogApi\\Models\\Article.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:49:41.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CommentService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Services\\CommentService.cs",
+              "RelativeDocumentMoniker": "BlogApi\\Services\\CommentService.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Services\\CommentService.cs*",
+              "RelativeToolTip": "BlogApi\\Services\\CommentService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:46:54.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ArticleService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Services\\ArticleService.cs",
+              "RelativeDocumentMoniker": "BlogApi\\Services\\ArticleService.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Services\\ArticleService.cs*",
+              "RelativeToolTip": "BlogApi\\Services\\ArticleService.cs*",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwCgAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:44:54.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Controllers\\CommentController.cs",
+              "RelativeDocumentMoniker": "BlogApi\\Controllers\\CommentController.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Controllers\\CommentController.cs*",
+              "RelativeToolTip": "BlogApi\\Controllers\\CommentController.cs*",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowAAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:42:32.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ArticleController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Controllers\\ArticleController.cs",
+              "RelativeDocumentMoniker": "BlogApi\\Controllers\\ArticleController.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogApi\\Controllers\\ArticleController.cs*",
+              "RelativeToolTip": "BlogApi\\Controllers\\ArticleController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:39:52.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ConsoleMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\UI\\ConsoleMenu.cs",
+              "RelativeDocumentMoniker": "BlogConsole\\UI\\ConsoleMenu.cs",
+              "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\UI\\ConsoleMenu.cs",
+              "RelativeToolTip": "BlogConsole\\UI\\ConsoleMenu.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T13:17:06.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ConsoleHelper.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\UI\\ConsoleHelper.cs",
               "RelativeDocumentMoniker": "BlogConsole\\UI\\ConsoleHelper.cs",
               "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\UI\\ConsoleHelper.cs",
               "RelativeToolTip": "BlogConsole\\UI\\ConsoleHelper.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAIwEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAA4wEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T13:14:20.367Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "CommentService.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\Services\\CommentService.cs",
               "RelativeDocumentMoniker": "BlogConsole\\Services\\CommentService.cs",
               "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\Services\\CommentService.cs",
               "RelativeToolTip": "BlogConsole\\Services\\CommentService.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAIwFkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAIwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T13:13:46.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T13:13:46.801Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "ArticleService.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\Services\\ArticleService.cs",
               "RelativeDocumentMoniker": "BlogConsole\\Services\\ArticleService.cs",
               "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\Services\\ArticleService.cs",
               "RelativeToolTip": "BlogConsole\\Services\\ArticleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T13:13:03.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T13:13:03.874Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Comment.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\Models\\Comment.cs",
               "RelativeDocumentMoniker": "BlogConsole\\Models\\Comment.cs",
               "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\Models\\Comment.cs",
               "RelativeToolTip": "BlogConsole\\Models\\Comment.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T11:02:33.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T11:02:33.927Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Article.cs",
               "DocumentMoniker": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\Models\\Article.cs",
               "RelativeDocumentMoniker": "BlogConsole\\Models\\Article.cs",
               "ToolTip": "C:\\Users\\Administrateur\\Desktop\\BlogSolution\\BlogConsole\\Models\\Article.cs",
               "RelativeToolTip": "BlogConsole\\Models\\Article.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T10:55:18.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-02T10:55:18.571Z"
             }
           ]
         }

@@ -19,9 +19,9 @@ namespace BlogApi.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Comment>()
-                .HasOne(c => c.Article)      // un Comment appartient à un Article
+                .HasOne(c => c.Article)      // un Com appartient à un Article
                 .WithMany(a => a.Comments)   // un Article peut avoir plusieurs Comments
-                .HasForeignKey(c => c.ArticleId); // clé étrangère dans Comment
+                .HasForeignKey(c => c.ArticleId); // Foreign Key dans Comment
         }
     }
 }
