@@ -7,35 +7,24 @@ var builder = WebApplication.CreateBuilder(args);
 // Ajouter les controllers
 builder.Services.AddControllers();
 
-// Ajouter Swagger / OpenAPI
-builder.Services.AddOpenApi();
-
-//  Connexion MySQL
-var connectionString = "Server=localhost;Database=BlogDB;Uid=root;Pwd=root;port=3306";
+// Connexion MySQL depuis appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 44));
 
-NewMethod(builder, connectionString, serverVersion);
+builder.Services.AddDbContext<BlogContext>(options =>
+    options.UseMySql(connectionString, serverVersion));
 
-//  ENREGISTRER LES SERVICES pour l'injection de dépendances
+// Injection de dépendances
 builder.Services.AddScoped<ArticleService>();
 builder.Services.AddScoped<CommentService>();
 
 var app = builder.Build();
 
-// Swagger en développement
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
-
 app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
-app.Run();
 
-// Méthode pour configurer DbContext
-static void NewMethod(WebApplicationBuilder builder, string connectionString, MySqlServerVersion serverVersion)
-{
-    builder.Services.AddDbContext<BlogContext>(options =>
-        options.UseMySql(connectionString, serverVersion));
-}
+// Ajouter un préfixe global "api/v1" pour tous les controllers
+app.MapControllerRoute(
+    name: "v1",
+    pattern: "api/v1/{controller}/{action=Index}/{id?}");
+
+app.Run();

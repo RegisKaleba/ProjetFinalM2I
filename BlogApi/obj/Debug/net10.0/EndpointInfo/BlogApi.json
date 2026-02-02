@@ -13,7 +13,7 @@
     }
   ],
   "paths": {
-    "/api/articles": {
+    "/api/v1/Articles": {
       "get": {
         "tags": [
           "Articles"
@@ -26,7 +26,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ArticleListDto"
+                    "$ref": "#/components/schemas/Article"
                   }
                 }
               },
@@ -34,7 +34,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ArticleListDto"
+                    "$ref": "#/components/schemas/Article"
                   }
                 }
               },
@@ -42,7 +42,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ArticleListDto"
+                    "$ref": "#/components/schemas/Article"
                   }
                 }
               }
@@ -58,17 +58,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateArticleDto"
+                "$ref": "#/components/schemas/Article"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateArticleDto"
+                "$ref": "#/components/schemas/Article"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateArticleDto"
+                "$ref": "#/components/schemas/Article"
               }
             }
           },
@@ -80,17 +80,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
+                  "$ref": "#/components/schemas/Article"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
+                  "$ref": "#/components/schemas/Article"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
+                  "$ref": "#/components/schemas/Article"
                 }
               }
             }
@@ -98,7 +98,7 @@
         }
       }
     },
-    "/api/articles/{id}": {
+    "/api/v1/Articles/{id}": {
       "get": {
         "tags": [
           "Articles"
@@ -124,17 +124,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
+                  "$ref": "#/components/schemas/Article"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
+                  "$ref": "#/components/schemas/Article"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
+                  "$ref": "#/components/schemas/Article"
                 }
               }
             }
@@ -164,17 +164,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateArticleDto"
+                "$ref": "#/components/schemas/Article"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateArticleDto"
+                "$ref": "#/components/schemas/Article"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateArticleDto"
+                "$ref": "#/components/schemas/Article"
               }
             }
           },
@@ -182,24 +182,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ArticleDetailsDto"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -229,74 +212,10 @@
         }
       }
     },
-    "/api/articles/{articleId}/comments": {
-      "post": {
-        "tags": [
-          "Comments"
-        ],
-        "parameters": [
-          {
-            "name": "articleId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "pattern": "^-?(?:0|[1-9]\\d*)$",
-              "type": [
-                "integer",
-                "string"
-              ],
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateCommentDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateCommentDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateCommentDto"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CommentDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CommentDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CommentDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/comments/{id}": {
+    "/api/v1/Articles/{id}/comments": {
       "get": {
         "tags": [
-          "Comments"
+          "Articles"
         ],
         "parameters": [
           {
@@ -319,23 +238,96 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommentDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Comment"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommentDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Comment"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommentDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Comment"
+                  }
                 }
               }
             }
           }
         }
       },
+      "post": {
+        "tags": [
+          "Articles"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Comment"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Comment"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Comment"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comment"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comment"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comment"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Comments/{id}": {
       "delete": {
         "tags": [
           "Comments"
@@ -365,7 +357,7 @@
   },
   "components": {
     "schemas": {
-      "ArticleDetailsDto": {
+      "Article": {
         "type": "object",
         "properties": {
           "id": {
@@ -396,12 +388,12 @@
           "comments": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommentDto"
+              "$ref": "#/components/schemas/Comment"
             }
           }
         }
       },
-      "ArticleListDto": {
+      "Comment": {
         "type": "object",
         "properties": {
           "id": {
@@ -412,22 +404,7 @@
             ],
             "format": "int32"
           },
-          "title": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "CommentDto": {
-        "type": "object",
-        "properties": {
-          "id": {
+          "articleId": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
               "integer",
@@ -435,6 +412,9 @@
             ],
             "format": "int32"
           },
+          "article": {
+            "$ref": "#/components/schemas/Article"
+          },
           "author": {
             "type": "string"
           },
@@ -444,49 +424,6 @@
           "createdAt": {
             "type": "string",
             "format": "date-time"
-          }
-        }
-      },
-      "CreateArticleDto": {
-        "required": [
-          "title",
-          "content"
-        ],
-        "type": "object",
-        "properties": {
-          "title": {
-            "maxLength": 200,
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          }
-        }
-      },
-      "CreateCommentDto": {
-        "type": "object",
-        "properties": {
-          "author": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          }
-        }
-      },
-      "UpdateArticleDto": {
-        "required": [
-          "title",
-          "content"
-        ],
-        "type": "object",
-        "properties": {
-          "title": {
-            "maxLength": 200,
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
           }
         }
       }

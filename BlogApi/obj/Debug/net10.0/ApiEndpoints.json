@@ -2,7 +2,7 @@
   {
     "ContainingType": "BlogApi.Controllers.ArticlesController",
     "Method": "GetAll",
-    "RelativePath": "api/articles",
+    "RelativePath": "api/v1/articles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "BlogApi.Controllers.ArticlesController",
     "Method": "Create",
-    "RelativePath": "api/articles",
+    "RelativePath": "api/v1/articles",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -48,7 +48,7 @@
   {
     "ContainingType": "BlogApi.Controllers.CommentsController",
     "Method": "AddComment",
-    "RelativePath": "api/articles/{articleId}/comments",
+    "RelativePath": "api/v1/articles/{articleId}/comments",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -79,7 +79,7 @@
   {
     "ContainingType": "BlogApi.Controllers.ArticlesController",
     "Method": "Get",
-    "RelativePath": "api/articles/{id}",
+    "RelativePath": "api/v1/articles/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -105,7 +105,7 @@
   {
     "ContainingType": "BlogApi.Controllers.ArticlesController",
     "Method": "Update",
-    "RelativePath": "api/articles/{id}",
+    "RelativePath": "api/v1/articles/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -136,7 +136,7 @@
   {
     "ContainingType": "BlogApi.Controllers.ArticlesController",
     "Method": "Delete",
-    "RelativePath": "api/articles/{id}",
+    "RelativePath": "api/v1/articles/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -152,7 +152,7 @@
   {
     "ContainingType": "BlogApi.Controllers.CommentsController",
     "Method": "GetCommentById",
-    "RelativePath": "api/comments/{id}",
+    "RelativePath": "api/v1/comments/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -178,7 +178,7 @@
   {
     "ContainingType": "BlogApi.Controllers.CommentsController",
     "Method": "DeleteComment",
-    "RelativePath": "api/comments/{id}",
+    "RelativePath": "api/v1/comments/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlogApi.Controllers
 {
     [ApiController]
-    [Route("api/articles")]
+    [Route("api/v1/articles")]
     public class ArticlesController : ControllerBase
     {
         private readonly ArticleService _service;
@@ -16,7 +16,7 @@ namespace BlogApi.Controllers
             _service = service;
         }
 
-        // GET /api/articles
+        // GET /api/v1/articles
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ArticleListDto>>> GetAll()
         {
@@ -32,7 +32,7 @@ namespace BlogApi.Controllers
             return Ok(dtos);
         }
 
-        // GET /api/articles/{id}
+        // GET /api/v1/articles/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<ArticleDetailsDto>> Get(int id)
         {
@@ -45,7 +45,7 @@ namespace BlogApi.Controllers
                 Title = article.Title,
                 Content = article.Content,
                 CreatedAt = article.CreatedAt,
-                UpdatedAt = article.UpdatedAt, // null si jamais mis à jour
+                UpdatedAt = article.UpdatedAt,
                 Comments = article.Comments.Select(c => new CommentDto
                 {
                     Id = c.Id,
@@ -58,7 +58,7 @@ namespace BlogApi.Controllers
             return Ok(dto);
         }
 
-        // POST /api/articles
+        // POST /api/v1/articles
         [HttpPost]
         public async Task<ActionResult<ArticleDetailsDto>> Create(CreateArticleDto dto)
         {
@@ -83,7 +83,7 @@ namespace BlogApi.Controllers
             return CreatedAtAction(nameof(Get), new { id = created.Id }, result);
         }
 
-        // PUT /api/articles/{id}
+        // PUT /api/v1/articles/{id}
         [HttpPut("{id}")]
         public async Task<ActionResult<ArticleDetailsDto>> Update(int id, UpdateArticleDto dto)
         {
@@ -92,7 +92,7 @@ namespace BlogApi.Controllers
 
             article.Title = dto.Title;
             article.Content = dto.Content;
-            article.UpdatedAt = DateTime.Now; // date mise à jour
+            article.UpdatedAt = DateTime.Now;
 
             await _service.UpdateAsync(article);
 
@@ -102,7 +102,7 @@ namespace BlogApi.Controllers
                 Title = article.Title,
                 Content = article.Content,
                 CreatedAt = article.CreatedAt,
-                UpdatedAt = article.UpdatedAt, // sera affiché maintenant
+                UpdatedAt = article.UpdatedAt,
                 Comments = article.Comments.Select(c => new CommentDto
                 {
                     Id = c.Id,
@@ -115,8 +115,7 @@ namespace BlogApi.Controllers
             return Ok(result);
         }
 
-
-        // DELETE /api/articles/{id}
+        // DELETE /api/v1/articles/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

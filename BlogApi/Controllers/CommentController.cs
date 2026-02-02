@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlogApi.Controllers
 {
     [ApiController]
-    [Route("api")]
+    [Route("api/v1")]
     public class CommentsController : ControllerBase
     {
         private readonly CommentService _commentService;
@@ -16,7 +16,7 @@ namespace BlogApi.Controllers
             _commentService = commentService;
         }
 
-        // POST /api/articles/{articleId}/comments
+        // POST /api/v1/articles/{articleId}/comments
         [HttpPost("articles/{articleId}/comments")]
         public async Task<ActionResult<CommentDto>> AddComment(
             int articleId,
@@ -49,7 +49,7 @@ namespace BlogApi.Controllers
                 result);
         }
 
-        // GET /api/comments/{id}
+        // GET /api/v1/comments/{id}
         [HttpGet("comments/{id}")]
         public async Task<ActionResult<CommentDto>> GetCommentById(int id)
         {
@@ -67,7 +67,7 @@ namespace BlogApi.Controllers
             return Ok(dto);
         }
 
-        // DELETE /api/comments/{id}
+        // DELETE /api/v1/comments/{id}
         [HttpDelete("comments/{id}")]
         public async Task<IActionResult> DeleteComment(int id)
         {
